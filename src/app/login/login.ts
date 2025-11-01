@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './login.css',
 })
 export class Login {
+  handleClickEvent() {
+    alert('Function called');
 
+    this.otherFunction();
+  }
+
+  otherFunction() {
+    console.log('Other function called');
+  }
 }
