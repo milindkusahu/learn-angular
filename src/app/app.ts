@@ -1,16 +1,21 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
-import { Signup } from './signup/signup';
-import { Profile } from './profile/profile';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Profile],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('learn-angular');
-  name = 'milind';
+  name: string = 'Milind Sahu';
+  data: string | number = 'Hello'; // pipe
+  other: any = true;
+
+  updateName() {
+    this.data = '30';
+  }
+
+  sum(a: number, b: number) {
+    console.log(a + b);
+  }
 }
