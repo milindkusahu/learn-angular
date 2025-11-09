@@ -7,15 +7,31 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css',
 })
 export class App {
-  name: string = 'Milind Sahu';
-  data: string | number = 'Hello'; // pipe
-  other: any = true;
+  count: number = 0;
 
-  updateName() {
-    this.data = '30';
-  }
+  // increment() {
+  //   this.count++;
+  // }
 
-  sum(a: number, b: number) {
-    console.log(a + b);
+  // decrement() {
+  //   if (this.count > 0) {
+  //     this.count--;
+  //   }
+  // }
+
+  // reset() {
+  //   this.count = 0;
+  // }
+
+  handleCounter(val: string) {
+    if (val === 'decrement') {
+      if (this.count > 0) {
+        this.count--;
+      }
+    } else if (val === 'increment') {
+      this.count++;
+    } else if (val === 'reset') {
+      this.count = 0;
+    }
   }
 }
