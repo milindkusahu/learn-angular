@@ -7,11 +7,27 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css',
 })
 export class App {
-  handleEvent(event: Event) {
-    console.log('Function Called', event.type);
-    console.log('Function Called', event.target);
-    console.log('Function Called', (event.target as Element).className);
+  name = '';
+  displayName = '';
+  email = '';
 
-    console.log('Value', (event.target as HTMLInputElement).value);
+  getName(event: Event) {
+    this.name = (event.target as HTMLInputElement).value;
+  }
+
+  showName() {
+    this.displayName = this.name;
+  }
+
+  setName() {
+    this.name = 'Milind';
+  }
+
+  getEmail(val: string) {
+    this.email = val;
+  }
+
+  setEmail() {
+    this.email = 'milindsahu2000@gmail.com';
   }
 }
