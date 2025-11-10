@@ -1,21 +1,31 @@
 <div class="container">
-  <h1>Counter App</h1>
+  <h1>Event in Angular</h1>
 
-  <div class="counter">
-    <span>{{ count }}</span>
+  <!-- click event -->
+  <div>
+    <button class="btn" name="btn" (click)="handleEvent($event)">Click Event</button>
   </div>
 
-  <div class="btn-container">
-    <div>
-      <button (click)="handleCounter('decrement')">Decrement</button>
-    </div>
+  <!-- mouse enter event -->
+  <div
+    (mouseenter)="handleEvent($event)"
+    style="background-color: green; width: 100px; height: 100px; margin-top: 30px"
+  ></div>
 
-    <div>
-      <button (click)="handleCounter('reset')">Reset</button>
-    </div>
+  <!-- mouse leave event -->
+  <div
+    (mouseleave)="handleEvent($event)"
+    style="background-color: orange; width: 100px; height: 100px; margin-top: 30px"
+  ></div>
 
-    <div>
-      <button (click)="handleCounter('increment')">Increment</button>
-    </div>
+  <!-- input event -->
+  <div style="margin-top: 30px">
+    <input
+      type="text"
+      name="user"
+      (input)="handleEvent($event)"
+      (focus)="handleEvent($event)"
+      (blur)="handleEvent($event)"
+    />
   </div>
 </div>
