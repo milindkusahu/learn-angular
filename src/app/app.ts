@@ -7,32 +7,15 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css',
 })
 export class App {
-  color: string = '';
+  users = ['Milind', 'Tony', 'Ankit', 'Vinay', 'Mukul'];
 
-  selectColor(val: string) {
-    if (val === 'red') {
-      this.color = 'red';
-    } else if (val === 'green') {
-      this.color = 'green';
-    } else if (val === 'yellow') {
-      this.color = 'yellow';
-    } else if (val === 'other') {
-      this.color = 'blue';
-    } else {
-      this.color = 'white';
-    }
-  }
-
-  handleInput(event: Event) {
-    let val = Number((event.target as HTMLInputElement).value);
-    if (val === 1) {
-      this.color = 'red';
-    } else if (val === 2) {
-      this.color = 'green';
-    } else if (val === 3) {
-      this.color = 'yellow';
-    } else {
-      this.color = 'blue';
-    }
-  }
+  students = [
+    { name: 'Milind', age: 26, email: 'milindsahu2000@gmail.com' },
+    { name: 'Aarav', age: 22, email: 'aarav.mehta@example.com' },
+    { name: 'Sneha', age: 24, email: 'sneha.patil@example.com' },
+    { name: 'Rohit', age: 25, email: 'rohit.sharma@example.com' },
+    { name: 'Priya', age: 23, email: 'priya.kapoor@example.com' },
+    { name: 'Vikas', age: 27, email: 'vikas.singh@example.com' },
+    { name: 'Neha', age: 21, email: 'neha.joshi@example.com' },
+  ];
 }
