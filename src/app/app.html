@@ -1,29 +1,17 @@
 <div class="container">
-  <h1>Get and Set Input field Value</h1>
-
   <div>
-    <h1>User Name is: {{ displayName }}</h1>
+    <h1>If Else | Contorl Flow</h1>
   </div>
 
-  <div>
-    <input type="text" value="{{ name }}" placeholder="Enter User Name" (input)="getName($event)" />
+  <div style="width: 200px; height: 200px">
+    @if (display) {
+    <div style="width: 200px; height: 200px; background-color: green"></div>
+    } @else {
+    <div style="width: 200px; height: 200px; background-color: gold"></div>
+    }
   </div>
 
   <div class="btn-container">
-    <button (click)="showName()">Get Name</button>
-    <button (click)="setName()">Get Name</button>
-  </div>
-
-  <hr />
-  <!-- Template reference variable -->
-  <div>
-    <h1>Email: {{ email }}</h1>
-  </div>
-  <div class="btn-container">
-    <input type="text" value="{{ email }}" placeholder="Enter Email" #emailField />
-  </div>
-  <div class="btn-container">
-    <button value="{{ email }}" (click)="getEmail(emailField.value)">Get Email</button>
-    <button (click)="setEmail()">Set Email</button>
+    <button (click)="toggle()">Toggle {{ display ? 'Gold' : 'Green' }}</button>
   </div>
 </div>

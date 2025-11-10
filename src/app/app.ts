@@ -7,27 +7,9 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css',
 })
 export class App {
-  name = '';
-  displayName = '';
-  email = '';
+  display = true;
 
-  getName(event: Event) {
-    this.name = (event.target as HTMLInputElement).value;
-  }
-
-  showName() {
-    this.displayName = this.name;
-  }
-
-  setName() {
-    this.name = 'Milind';
-  }
-
-  getEmail(val: string) {
-    this.email = val;
-  }
-
-  setEmail() {
-    this.email = 'milindsahu2000@gmail.com';
+  toggle() {
+    this.display = !this.display;
   }
 }
