@@ -1,17 +1,27 @@
 <div class="container">
   <div>
-    <h1>If Else | Contorl Flow</h1>
-  </div>
-
-  <div style="width: 200px; height: 200px">
-    @if (display) {
-    <div style="width: 200px; height: 200px; background-color: green"></div>
-    } @else {
-    <div style="width: 200px; height: 200px; background-color: gold"></div>
-    }
+    <h1>Else If | Contorl Flow</h1>
   </div>
 
   <div class="btn-container">
-    <button (click)="toggle()">Toggle {{ display ? 'Gold' : 'Green' }}</button>
+    <button (click)="selectColor('red')">Red</button>
+    <button (click)="selectColor('green')">Green</button>
+    <button (click)="selectColor('yellow')">Yellow</button>
+    <button (click)="selectColor('other')">Other</button>
+    <input type="number" (input)="handleInput($event)" />
+  </div>
+
+  <div style="width: 200px; height: 200px; margin-top: 30px">
+    @if(color === "red") {
+    <div style="width: 200px; height: 200px; background-color: red"></div>
+    } @else if (color === "green") {
+    <div style="width: 200px; height: 200px; background-color: green"></div>
+    }@else if (color === "yellow") {
+    <div style="width: 200px; height: 200px; background-color: yellow"></div>
+    }@else if (color === "blue") {
+    <div style="width: 200px; height: 200px; background-color: blue"></div>
+    } @else {
+    <div style="width: 200px; height: 200px; background-color: white"></div>
+    }
   </div>
 </div>
